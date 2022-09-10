@@ -4,7 +4,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import VoicemailOutlinedIcon from "@mui/icons-material/VoicemailOutlined";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import DialpadTwoToneIcon from "@mui/icons-material/DialpadTwoTone";
-
+import { ContactsList } from "../contactslist/ContactsList";
 import "./Sidebar.css";
 import { Searchbar } from "../search/Searchbar";
 
@@ -36,6 +36,9 @@ export const Sidebar = () => {
       <div className="list">
         <div>
           <Searchbar />
+        </div>
+        <div className="ContactList">
+          <ContactsList />
         </div>
       </div>
     </div>

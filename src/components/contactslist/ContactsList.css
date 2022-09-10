@@ -1,0 +1,10 @@
+.alphabet {
+  margin-top: 20px;
+}
+
+.name {
+  /* background-color: red; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}

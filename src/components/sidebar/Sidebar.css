@@ -38,3 +38,8 @@
 .icons:hover {
   transform: translate(5px, 5px);
 }
+
+.ContactList {
+  margin-top: 20px;
+  margin-left: 10px;
+}
