@@ -6,6 +6,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import DialpadTwoToneIcon from "@mui/icons-material/DialpadTwoTone";
 
 import "./Sidebar.css";
+import { Searchbar } from "../search/Searchbar";
 
 export const Sidebar = () => {
   return (
@@ -32,7 +33,11 @@ export const Sidebar = () => {
           <h6>Voicemail</h6>
         </div>
       </div>
-      <div className="list">asdas</div>
+      <div className="list">
+        <div>
+          <Searchbar />
+        </div>
+      </div>
     </div>
   );
 };
