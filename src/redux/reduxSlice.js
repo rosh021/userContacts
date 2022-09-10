@@ -12,10 +12,9 @@ const userSlice = createSlice({
     setUsers: (state, { payload }) => {
       state.allUsers = payload;
     },
-    setClick: {
-      setClick: (state, { payload }) => {
-        state.click = payload;
-      },
+
+    setClick: (state, { payload }) => {
+      state.click = payload;
     },
   },
 });

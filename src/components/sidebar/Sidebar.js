@@ -34,9 +34,6 @@ export const Sidebar = () => {
         </div>
       </div>
       <div className="list">
-        <div>
-          <Searchbar />
-        </div>
         <div className="ContactList">
           <ContactsList />
         </div>
