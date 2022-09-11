@@ -18,6 +18,8 @@
   overflow: scroll;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-color: blue, orange;
 }
 
 .icons {
@@ -33,10 +35,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  transition: all 0.5s;
 }
 
 .icons:hover {
-  transform: translate(5px, 5px);
+  transform: scale(1.5);
 }
 
 .ContactList {

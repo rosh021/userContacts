@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   allUsers: [],
   click: [],
+  showComp: "list",
 };
 
 const userSlice = createSlice({
@@ -15,11 +16,15 @@ const userSlice = createSlice({
 
     setClick: (state, { payload }) => {
       state.click = payload;
+      state.showComp = "selected";
+    },
+    setShowComp: (state, { payload }) => {
+      state.showComp = payload;
     },
   },
 });
 
 const { reducer, actions } = userSlice;
-export const { setUsers, setClick } = actions;
+export const { setUsers, setClick, setShowComp } = actions;
 
 export default reducer;

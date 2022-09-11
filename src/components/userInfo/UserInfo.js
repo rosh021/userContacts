@@ -2,22 +2,26 @@ import React from "react";
 import "./UserInfo.css";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import { useDispatch, useSelector } from "react-redux";
-import { setClick } from "../../redux/reduxSlice";
+import { setClick, setShowComp } from "../../redux/reduxSlice";
 import { ContactsList } from "../contactslist/ContactsList";
 import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import OpenInNewOutlinedIcon from "@mui/icons-material/OpenInNewOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import { Layout } from "../layout/Layout";
 
 export const UserInfo = () => {
   const dispatch = useDispatch();
   const { click } = useSelector((state) => state.users);
   console.log(click);
-  const handelOnClick = (e) => {};
+
   return (
-    <div>
-      <div className="userInfo__btn">
-        <button onClick={handelOnClick} className="contact__btn">
+    <Layout>
+      <div className="userInfo__btn_contacts">
+        <button
+          onClick={() => dispatch(setShowComp("list"))}
+          className="contact__btn"
+        >
           <ArrowBackIosRoundedIcon fontSize="small" />
           <span>Contacts</span>
         </button>
@@ -25,7 +29,7 @@ export const UserInfo = () => {
       <div className="userInfo__name">
         <div className="username">{click[0].name?.charAt(0)}</div>
         <div className="name">{click[0].name}</div>
-        <p>{click[0].username}</p>
+        {click[0].username}
       </div>
       <div className="userInfo__icons">
         <a href="sms:">
@@ -53,6 +57,26 @@ export const UserInfo = () => {
           </div>
         </a>
       </div>
-    </div>
+      <div className="phone">
+        <h5>Phone</h5>
+        {click[0].phone}
+      </div>
+      <div className="address">
+        <h5>Address</h5>
+        {click[0].address.suite}/{click[0].address.street}/
+        {click[0].address.city}/{click[0].address.zipcode}
+      </div>
+      <div className="company">
+        <h5>Company</h5>
+        {click[0].company.name}
+        <br />
+        {click[0].company.catchPhrase}
+        <br />
+        {click[0].company.bs}
+      </div>
+      <div>
+        <button className="userInfo__btn">Add to favorite</button>
+      </div>
+    </Layout>
   );
 };
