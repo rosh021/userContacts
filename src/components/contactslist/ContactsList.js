@@ -62,9 +62,10 @@ export const ContactsList = () => {
     <Layout>
       <div>
         <Searchbar handleOnSearch={handleOnSearch} />
-        <hr />
+
         <h4>{displayData?.length} Contacts Found</h4>
-        <div>
+        <hr />
+        <div className="info">
           {startsWithC.length > 0 && (
             <>
               <h4 className="alphabet">C</h4>

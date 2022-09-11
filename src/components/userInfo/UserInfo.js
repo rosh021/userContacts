@@ -33,7 +33,7 @@ export const UserInfo = () => {
       </div>
       <div className="userInfo__icons">
         <a href="sms:">
-          <div className="userInfo__icons__icon">
+          <div className="userInfo__icons__icon__message">
             <SmsOutlinedIcon />
             <h6>message</h6>
           </div>
@@ -68,10 +68,12 @@ export const UserInfo = () => {
       </div>
       <div className="company">
         <h5>Company</h5>
-        {click[0].company.name}
+        <span className="company__span">Name:</span> {click[0].company.name}
         <br />
+        <span className="company__span">Cath Phrase: </span>
         {click[0].company.catchPhrase}
         <br />
+        <span className="company__span">BS: </span>
         {click[0].company.bs}
       </div>
       <div>

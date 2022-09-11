@@ -14,7 +14,7 @@ export const LandingPage = () => {
     selected: <UserInfo />,
   };
   return (
-    <div>
+    <div className="LandingPage">
       <div>{showComponent[showComp]}</div>
     </div>
   );

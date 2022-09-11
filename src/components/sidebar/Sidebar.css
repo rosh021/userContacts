@@ -1,6 +1,6 @@
 .sidebar {
   /* background-color: white; */
-  height: 500px;
+  height: 600px;
   box-sizing: border-box;
   display: flex;
   box-shadow: -2px 2px 2px 2px rgba(236, 204, 204, 0.616);
@@ -10,20 +10,22 @@
   background-color: white;
   width: 50px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .list {
   background-color: rgba(255, 255, 255, 0.178);
-  width: 400px;
+  width: 450px;
   overflow: scroll;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-color: blue, orange;
 }
 
 .icons {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-bottom: 5px;
   cursor: pointer;
 
@@ -46,4 +48,10 @@
 .ContactList {
   margin-top: 20px;
   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .list {
+    width: 300px;
+  }
 }

@@ -2,20 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .contact__btn {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   border: none;
   background-color: Transparent;
-  cursor: pointer;
-}
-
-.edit__btn {
-  background-color: Transparent;
-  border: none;
-  margin-right: 5px;
   cursor: pointer;
 }
 
@@ -24,6 +19,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-weight: bolder;
 }
 
 .username {
@@ -39,18 +35,21 @@
 
 .userInfo__icons {
   display: flex;
-
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 20px;
   padding-right: 10px;
 }
 
 .userInfo__icons__icon {
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  padding: 2px;
+  padding: 5px;
+  text-decoration: none;
   align-items: center;
   width: 80px;
   box-sizing: border-box;
@@ -59,10 +58,25 @@
   cursor: pointer;
 }
 
+.userInfo__icons__icon__message {
+  background-color: white;
+  opacity: 0.4;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5px;
+  text-decoration: none;
+  align-items: center;
+  width: 80px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(94, 88, 76);
+}
+
 .phone {
   background-color: white;
-  margin-top: 15px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   margin-right: 8px;
   box-shadow: 2px 2px 2px 2px rgb(94, 88, 76);
   border-radius: 5px;
@@ -70,8 +84,8 @@
 
 .address {
   background-color: white;
-  margin-top: 15px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   margin-right: 8px;
   box-shadow: 2px 2px 2px 2px rgb(94, 88, 76);
   border-radius: 5px;
@@ -79,19 +93,36 @@
 
 .company {
   background-color: white;
-  margin-top: 15px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   margin-right: 8px;
   box-shadow: 2px 2px 2px 2px rgb(94, 88, 76);
   border-radius: 5px;
 }
 
+.company__span {
+  font-weight: bolder;
+}
+
 .userInfo__btn {
-  margin-top: 5px;
+  margin-top: 20px;
   background-color: white;
-  padding: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
   border: none;
   box-shadow: 2px 2px 2px 2px rgb(94, 88, 76);
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .userInfo__icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .userInfo__icons__icon {
+    margin: 5px;
+  }
 }
